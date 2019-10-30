@@ -1,0 +1,7 @@
+.pie{
+    background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372);
+}
+.pie__contenido div a{
+    color: aliceblue;
+    text-decoration: none;
+}
