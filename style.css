@@ -5,3 +5,10 @@
     color: aliceblue;
     text-decoration: none;
 }
+#slider img{
+    height: 80vh;
+    object-fit: cover;
+}
+#slider .overlay .container-fluid .row{
+    height: 80vh;
+}
