@@ -8,7 +8,19 @@
 #slider img{
     height: 80vh;
     object-fit: cover;
+    filter: grayscale(70%);
 }
-#slider .overlay .container-fluid .row{
+#slider{
+    position: relative;
+}
+.overlay{
+    background-color: rgb(1,1,1,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.overlay .caja{
     height: 80vh;
 }
