@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body data-spy="scroll" data-target="#menuOrador">
+    <nav id="menuOrador" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid mx-sm-5">
             <a class="navbar-brand" href="#">BootStrap</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,27 +17,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">La conferencia <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#laconferencia">La conferencia <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Los oradores</a>
+                        <a class="nav-link" href="#losoradores">Los oradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                        <a class="nav-link" href="#lugar">El lugar y la fecha</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Conviértete en orador</a>
+                        <a class="nav-link" href="#seorador">Conviértete en orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comprar tickets</a>
+                        <a class="nav-link text-success" href="#comprar" data-toggle="modal" data-target="#modalOrador" role="button">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <main class="container-fluid px-0">
-        <div class="row">
+        <div class="row" id="laconferencia">
             <div class="col">
                 <div id="slider" class="carousel slide" data-ride="carousel" data-pause="false">
                     <div class="carousel-inner">
@@ -59,24 +59,16 @@
                                             Codigo Conf llega por pimera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del Team Codigo, a otros estudiantes de Codigo y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                                         </p>
                                         <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-                                        <button type="button" class="btn btn-success">Comprar tickets</button>
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalOrador">Comprar tickets</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>-->
                 </div>
             </div>
         </div>
-        <section class="container-fluid px-5">
+        <section class="container-fluid px-5" id="losoradores">
             <div class="row my-3">
                 <div class="col text-center">
                     <p>Conoce a los</p>
@@ -130,7 +122,7 @@
                 </div>
             </div>
         </section>
-        <section class="container-fluid">
+        <section class="container-fluid" id="lugar">
             <div class="row">
                 <div class="col-12 col-lg-6 px-0">
                     <img class="img-fluid" src="./assets/img/honolulu.jpg" alt="Honolulu">
@@ -144,7 +136,7 @@
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="seorador">
             <div class="row my-3">
                 <div class="col text-center">
                     <p>CONVIERTETE EN UN</p>
@@ -173,6 +165,39 @@
                             <button type="button" class="btn btn-success btn-block">Enviar</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="modal" tabindex="-1" role="dialog" id="modalOrador">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Comprar tickets</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-warning" role="alert">
+                            Recibirás un correo de confirmación si sales sorteado
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success">Comprar</button>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
